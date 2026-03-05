@@ -1,9 +1,5 @@
 //go:build e2e
 
-// Author: FNGarvin
-// License: MIT
-// Year: 2026
-
 package e2e
 
 import (
@@ -68,8 +64,6 @@ func runE2ECmd(args ...string) (string, error) {
 
 	// Sanitize the command echo to hide keys in arguments if any
 	// cmdStr := fmt.Sprintf("%s %s", binaryPath, strings.Join(args, " "))
-	// Using fmt.Printf here for immediate visibility in CI, but t.Logf is preferred within tests.
-	// We'll update calls to pass *testing.T where possible.
 
 	cmd := exec.Command(binaryPath, args...)
 	var out bytes.Buffer
